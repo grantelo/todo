@@ -1,0 +1,156 @@
+.tasks {
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    padding-bottom: 20px;
+    cursor: pointer;
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 32px;
+    border-bottom: 1px solid #f2f2f2;
+
+    &:hover {
+      svg {
+        opacity: 1;
+      }
+    }
+
+    svg {
+      opacity: 0;
+      margin-left: 15px;
+
+      &:hover {
+        path {
+          fill: #000;
+        }
+      }
+    }
+  }
+
+  &__items {
+    margin-top: 31px;
+
+    &-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+
+      &:hover &-actions {
+        opacity: 1;
+      }
+
+      &-actions {
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        div {
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 32px;
+          height: 32px;
+          background-color: #fafbfc;
+          border-radius: 6px;
+
+          &:hover {
+            background-color: #eef1f4;
+
+            svg path {
+              fill: #000;
+            }
+          }
+
+          & + div {
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .checkbox {
+    input {
+      display: none;
+
+      &:checked + label {
+        background: #4dd599;
+        border-color: #4dd599;
+
+        svg {
+          opacity: 1;
+          path {
+            stroke: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #e8e8e8;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+
+    &:hover {
+      background: #f2f2f2;
+      svg {
+        opacity: 1;
+      }
+    }
+
+    svg {
+      opacity: 0;
+      transition: all 0.15s ease-in-out;
+    }
+  }
+
+  p {
+    width: 100%;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  &__form {
+    margin-top: 20px;
+    &-block {
+      button {
+        margin-top: 15px;
+        margin-right: 10px;
+      }
+    }
+
+    &-add {
+      opacity: 0.3;
+      transition: all 0.15s ease-in-out;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      li {
+        padding: 0;
+      }
+
+      svg {
+        margin-left: 4px;
+        width: 16px;
+        height: 16px;
+      }
+
+      span {
+        margin-left: 10px;
+        font-size: 16px;
+      }
+    }
+  }
+}
